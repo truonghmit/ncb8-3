@@ -30,6 +30,15 @@ const headerOne = document.getElementById('headerNames');
 // const timesUp = document.getElementById('timesUp');
 // const timerWrapper = document.getElementById('timerWrapper');
 // const timer = document.getElementById('timer');
+  const divButton = document.getElementById('button-container');
+ 
+
+document.addEventListener("DOMContentLoaded", function(event) {
+    if(localStorage.getItem('popState') == 'shown'){  
+       headerNames.textContent = "Bạn đã nhận được quà là " + localStorage.getItem('iQua'); 
+	   divButton.style.display = "none";
+    } 
+}); 
 
 // Optional countdown timer
 // Add zero in front of numbers < 10
@@ -78,11 +87,13 @@ stopButton.addEventListener('click', function() {
 	clearInterval(intervalHandle);
 	namesList.splice(namesList.indexOf(headerNames.textContent), 1)
 	console.log(namesList, headerNames.textContent)
-	timer.innerHTML = time;
+	 
 	if (showTimer===true) {
 		timerWrapper.classList.add('visible');
-	}
-	startTimer();
+	} 
+	localStorage.setItem('iQua', headerNames.textContent);
+	localStorage.setItem('popState', 'shown');
+	 divButton.style.display = "none";
 	
 });
 
