@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quay thưởng trúng quà</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img class="logo" src="logo300.png" alt="">
+        </div>
+        <h1 id="headerNames">Quay thưởng trúng quà cùng với NCB</h1>
+        <div class="button-container">
+            <div class="button" id="startButton">Ấn để nhận quà</div>
+            <div class="button" id="stopButton">Lựa quà ngay</div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
