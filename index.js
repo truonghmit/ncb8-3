@@ -8,15 +8,15 @@ const time = 0 + ":" + 19;
 
 // Add list of names here
 const namesList = [
-	'Quà 1',
-	'Quà 2',
-	'Quà 3',
-	'Quà 4',
-	'Quà 5',
-	'Quà 6',
-	'Quà 7',
-	'Quà 8',
-	'Quà 9'
+	'Rolls-Royce',
+	'Mercedes 300',
+	'Land Rover 2022',
+	'Bentley SUV',
+	'Lexus 570',
+	'Audi A8',
+	'BMW',
+	'KIA K5',
+	'VINFAST LUX'
 	 
 ];
 
@@ -31,12 +31,15 @@ const headerOne = document.getElementById('headerNames');
 // const timerWrapper = document.getElementById('timerWrapper');
 // const timer = document.getElementById('timer');
   const divButton = document.getElementById('button-container');
+   const divPhao = document.getElementById('phao');
  
 
 document.addEventListener("DOMContentLoaded", function(event) {
     if(localStorage.getItem('popState') == 'shown'){  
-       headerNames.textContent = "Bạn đã nhận được quà là " + localStorage.getItem('iQua'); 
+       headerNames.textContent = "Bạn đã nhận được phần quà " + localStorage.getItem('iQua'); 
 	   divButton.style.display = "none";
+	   divPhao.innerHTML = '<div class="before"></div><div class="after"></div>';
+	    
     } 
 }); 
 
@@ -94,6 +97,7 @@ stopButton.addEventListener('click', function() {
 	localStorage.setItem('iQua', headerNames.textContent);
 	localStorage.setItem('popState', 'shown');
 	 divButton.style.display = "none";
+	 divPhao.innerHTML = '<div class="before"></div><div class="after"></div>';
 	
 });
 
